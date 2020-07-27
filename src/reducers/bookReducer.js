@@ -2,7 +2,6 @@ import { DEFAULT, ADD_BOOK, REM_BOOK } from '../constants';
 import { v4 as uuid } from "node-uuid";
 
 export const bookReducer = (state, action) => {
-    console.log(`action: ${JSON.stringify(action)}`);
     const stateChanger = {
       [ADD_BOOK]: () => [...state, {
           title: action.book.title,
